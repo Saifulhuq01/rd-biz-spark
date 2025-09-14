@@ -165,20 +165,20 @@ const TabNavigation = () => {
                 <div className="space-y-3 text-muted-foreground">
                   <div className="flex items-center gap-3">
                     <span className="text-primary font-semibold">📍 Address:</span>
-                    <span>123 Business District, Innovation Hub, Tech City, TC 12345</span>
+                    <span>Old# 27/ New# 10, 9th Avenue, 45th Street, Ashok Nagar, Chennai, Tamil Nadu - 600083</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-primary font-semibold">📞 Phone:</span>
-                    <span className="font-mono">+1 (555) 123-RDBIZ</span>
+                    <span className="font-mono">(004) 31568424</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  {/* <div className="flex items-center gap-3">
                     <span className="text-primary font-semibold">✉️ Email:</span>
                     <span>info@rdbiz.com</span>
-                  </div>
-                  <div className="flex items-center gap-3">
+                  </div> */}
+                  {/* <div className="flex items-center gap-3">
                     <span className="text-primary font-semibold">🌐 Website:</span>
                     <span>www.rdbiz.com</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
