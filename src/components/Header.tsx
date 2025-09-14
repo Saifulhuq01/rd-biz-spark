@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import rdbizLogo from '@/assets/rdbiz-logo.png';
+import rdbizLogo from '@/assets/logo.jpg';
 import ceoRavi from '@/assets/ceo-ravi.jpg';
 
 const Header = () => {
@@ -10,14 +10,14 @@ const Header = () => {
     <>
       <header className="bg-card border-b-4 border-primary px-8 py-6 shadow-soft">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-8">
-          {/* Logo with Rotation Animation */}
+          {/* Logo without Rotation & Circle */}
           <div className="flex-shrink-0">
-            <img 
-              src={rdbizLogo} 
-              alt="RDbiz Logo" 
-              className="h-20 w-20 logo-rotate rounded-full border-2 border-primary/20"
-            />
-          </div>
+  <img 
+    src={rdbizLogo} 
+    alt="RDbiz Logo" 
+    className="h-20 object-contain"
+  />
+</div>
 
           {/* Header Text */}
           <div className="flex-1 mx-8 fade-in">

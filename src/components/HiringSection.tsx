@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import hiringTeamImg from '@/assets/hiring-team.jpg';
+import hiringTeamImg1 from '@/assets/hire/hire1.jpeg';
+import hiringTeamImg2 from '@/assets/hire/hire2.jpg';
 
 const HiringSection = () => {
   return (
@@ -13,15 +14,23 @@ const HiringSection = () => {
         through innovative solutions and collaborative growth.
       </p>
       
-      <div className="flex justify-center mb-8">
-        <div className="hover-lift">
-          <img 
-            src={hiringTeamImg} 
-            alt="Join Our Team" 
-            className="w-full max-w-md rounded-xl shadow-medium"
-          />
-        </div>
-      </div>
+<div className="flex justify-center gap-6 mb-8">
+  <div className="hover-lift">
+    <img 
+      src={hiringTeamImg1} 
+      alt="Join Our Team" 
+      className="w-full max-w-md rounded-xl shadow-medium"
+    />
+  </div>
+  <div className="hover-lift">
+    <img 
+      src={hiringTeamImg2} 
+      alt="Join Our Team" 
+      className="w-full max-w-md rounded-xl shadow-medium"
+    />
+  </div>
+</div>
+
 
       <Button 
         size="lg" 

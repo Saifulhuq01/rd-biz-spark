@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import rdbizLogo from '@/assets/rdbiz-logo.png';
+import rdbizLogo from '@/assets/logo.jpg';
 
 const FloatingLogo = () => {
   const [position, setPosition] = useState({ x: 50, y: 50 });
