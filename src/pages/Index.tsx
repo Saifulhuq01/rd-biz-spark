@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Header from '@/components/Header';
 import TabNavigation from '@/components/TabNavigation';
 import Footer from '@/components/Footer';
+import FloatingLogo from '@/components/FloatingLogo';
 
 const Index = () => {
   useEffect(() => {
@@ -31,6 +32,9 @@ const Index = () => {
       </main>
       
       <Footer />
+      
+      {/* Floating Interactive Logo */}
+      <FloatingLogo />
     </div>
   );
 };

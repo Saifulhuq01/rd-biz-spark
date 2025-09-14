@@ -143,15 +143,84 @@ const TabNavigation = () => {
 
       case 'about':
         return (
-          <div className="max-w-4xl mx-auto p-8 fade-in text-center">
-            <h2 className="text-3xl font-bold gradient-text mb-8">About Us</h2>
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-12 rounded-xl">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="max-w-4xl mx-auto p-8 fade-in">
+            <h2 className="text-3xl font-bold gradient-text mb-8 text-center">About Us</h2>
+            
+            {/* Company Description */}
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-xl mb-8">
+              <p className="text-lg text-muted-foreground leading-relaxed text-center">
                 RDbiz is dedicated to empowering small businesses through innovative infrastructure,
-                services, and training under the SET-ME model. Founded by visionary entrepreneur
-                Ravi Dakshinamoorthy, we combine American business acumen with global perspectives
-                to deliver world-class solutions that help businesses thrive in today's competitive landscape.
+                services, and training under the <span className="font-bold text-primary">SET-ME model</span>. 
+                Founded by visionary entrepreneur Ravi Dakshinamoorthy, we combine 
+                <span className="font-bold text-secondary"> American business acumen</span> with 
+                <span className="font-bold text-primary"> global perspectives</span> to deliver 
+                world-class solutions that help businesses thrive in today's competitive landscape.
               </p>
+            </div>
+
+            {/* Contact Information */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-card border border-primary/20 p-6 rounded-xl">
+                <h3 className="text-xl font-bold text-secondary mb-4">Contact Information</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <div className="flex items-center gap-3">
+                    <span className="text-primary font-semibold">📍 Address:</span>
+                    <span>123 Business District, Innovation Hub, Tech City, TC 12345</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-primary font-semibold">📞 Phone:</span>
+                    <span className="font-mono">+1 (555) 123-RDBIZ</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-primary font-semibold">✉️ Email:</span>
+                    <span>info@rdbiz.com</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-primary font-semibold">🌐 Website:</span>
+                    <span>www.rdbiz.com</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card border border-secondary/20 p-6 rounded-xl">
+                <h3 className="text-xl font-bold text-secondary mb-4">Key Highlights</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-primary rounded-full"></span>
+                    <span className="text-muted-foreground"><strong className="text-primary">SOA Systems</strong> Expertise</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-secondary rounded-full"></span>
+                    <span className="text-muted-foreground"><strong className="text-secondary">SET-ME</strong> Training Model</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-primary rounded-full"></span>
+                    <span className="text-muted-foreground"><strong className="text-primary">Cost-Effective</strong> Solutions</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-secondary rounded-full"></span>
+                    <span className="text-muted-foreground"><strong className="text-secondary">Global</strong> Partnerships</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-primary rounded-full"></span>
+                    <span className="text-muted-foreground"><strong className="text-primary">24/7</strong> Support</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Business Hours */}
+            <div className="mt-8 bg-gradient-to-r from-primary/5 to-secondary/5 p-6 rounded-xl text-center">
+              <h3 className="text-lg font-bold text-secondary mb-3">Business Hours</h3>
+              <div className="grid md:grid-cols-2 gap-4 text-muted-foreground">
+                <div>
+                  <span className="font-semibold text-primary">Monday - Friday:</span> 9:00 AM - 6:00 PM
+                </div>
+                <div>
+                  <span className="font-semibold text-primary">Saturday:</span> 10:00 AM - 4:00 PM
+                </div>
+              </div>
+              <p className="mt-2 text-sm italic">Closed on Sundays and major holidays</p>
             </div>
           </div>
         );
