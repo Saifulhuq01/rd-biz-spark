@@ -51,7 +51,7 @@ const Header = () => {
 
       {/* CEO Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-4xl text-center">
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto text-left">
 
           <DialogHeader>
             <div className="flex justify-center mb-4">
@@ -65,51 +65,51 @@ const Header = () => {
               Ravi Dakshinamoorthy
             </DialogTitle>
           </DialogHeader>
-          <p className="text-muted-foreground leading-relaxed">
+          <div className="text-muted-foreground leading-relaxed space-y-4">
+            <p className="text-lg font-semibold text-primary">Dr. Ravi Dakshinamoorthy, Ph.D. (USA)</p>
 
-Dr. Ravi Dakshinamoorthy, Ph.D. (USA)
+            <p>Dr. Ravi Dakshinamoorthy, our CEO, is a multi-disciplinary, multi-project professional who has served in WCDMA/GSM/GPRS/GERAN/3GPP standards body as an American Representative.</p>
 
-Dr. Ravi Dakshinamoorthy, our CEO, is a multi-disciplinary, multi-project professional who has served in WCDMA/GSM/GPRS/GERAN/3GPP standards body as an American Representative.
+            <p>He has served in multiple boards, councils, interviewing committees, and selection boards. He also served as a Proposal & Program Manager for the $2.4 Billion U.S. Joint Force Programme "Objective Gateway Inc. 2" at Boeing Integrated Defense Systems division.</p>
 
-He has served in multiple boards, councils, interviewing committees, and selection boards. He also served as a Proposal & Program Manager for the $2.4 Billion U.S. Joint Force Programme “Objective Gateway Inc. 2” at Boeing Integrated Defense Systems division.
+            <p>Dr. Ravi also served as the Chief Systems Architect for the prestigious VC-X Recapitalization IRAD Programme for the US AF1 programme.</p>
 
-Dr. Ravi also served as the Chief Systems Architect for the prestigious VC-X Recapitalization IRAD Programme for the US AF1 programme.
+            <p>With deep expertise in U.S. defense and aerospace, Dr. Ravi has held very high capacities, leading multi-million to billion-dollar programmes for over 24 years.</p>
 
-With deep expertise in U.S. defense and aerospace, Dr. Ravi has held very high capacities, leading multi-million to billion-dollar programmes for over 24 years.
+            <p>He has successfully led System-of-Systems, System Engineering, and Architecture Management, along with integrated tasks for many large-scale programmes and projects world wide.</p>
 
-He has successfully led System-of-Systems, System Engineering, and Architecture Management, along with integrated tasks for many large-scale programmes and projects world wide.
+            <div className="bg-primary/10 p-4 rounded-lg">
+              <p className="font-semibold text-secondary mb-3">Major Programme Leadership:</p>
+              <ul className="space-y-2 ml-4">
+                <li>• <strong>The Future Combat Systems</strong> (US Army)</li>
+                <li>• <strong>Objective Gateway Increment 2</strong> (US Joint Services)</li>
+                <li>• <strong>Presidential Aircraft Recapitalizations VC-X</strong> (US AF-1) – Supreme Commander-in-Chief of operations plane (planned tentatively for the 2019 per 2009 predictions)</li>
+              </ul>
+            </div>
 
-The Future Combat Systems (US Army)
+            <p>✅ <strong>Dr. Ravi has also served as an independent consultant and Project Manager to the State Governor of Washington, USA,</strong> in producing a 640-page report on the RV–1 Consolidation Program "for legislative assembly members' discussion and budgetary debate."</p>
 
-Objective Gateway Increment 2 (US Joint Services)
+            <div className="bg-secondary/10 p-4 rounded-lg">
+              <p className="font-semibold text-primary mb-3">✅ Dr. Ravi is a legendary leader in IT development with thirty years of post-doctorate experience, having interest in diversified subject areas including:</p>
+              <div className="grid md:grid-cols-2 gap-2 ml-4">
+                <ul className="space-y-1">
+                  <li>• System-of-Systems (SoS)</li>
+                  <li>• Service Oriented Architecture (SOA)</li>
+                  <li>• Very Large Scale Systems Integration</li>
+                  <li>• Systems – Software</li>
+                </ul>
+                <ul className="space-y-1">
+                  <li>• Wired – Wireless – Mobile Ad-hoc Networks</li>
+                  <li>• Embedded Systems</li>
+                  <li>• Application Development in a variety of domains</li>
+                </ul>
+              </div>
+            </div>
 
-Presidential Aircraft Recapitalizations VC-X (US AF-1) – Supreme Commander-in-Chief of operations plane (planned tentatively for the 2019 per 2009 predictions).
+            <p>✅ <strong className="text-primary">Dr. Ravi is a great mentor,</strong> involved in numerous projects and programmes in skills development and training. Mentees worldwide are pursuing their careers very successfully under his career guidance and training.</p>
 
-✅ Dr. Ravi has also served as an independent consultant and Project Manager to the State Governor of Washington, USA, in producing a 640-page report on the RV–1 Consolidation Program “for legislative assembly members’ discussion and budgetary debate.”
-
-✅ Dr. Ravi is a legendary leader in IT development with thirty years of post-doctorate experience, having interest in diversified subject areas including:
-
-System-of-Systems (SoS)
-
-Service Oriented Architecture (SOA)
-
-Very Large Scale Systems Integration
-
-Systems – Software
-
-Wired – Wireless – Mobile Ad-hoc Networks
-
-Embedded Systems
-
-Application Development in a variety of domains
-
-
-✅ Dr. Ravi is a great mentor, involved in numerous projects and programmes in skills development and training. Mentees worldwide are pursuing their careers very successfully under his career guidance and training.
-
-⭐ Dr. Ravi has coached and developed students entering the workforce in core professional categories, and working professionals to achieve and advance in their career to the next level.
-
-
-          </p>
+            <p>⭐ <strong className="text-secondary">Dr. Ravi has coached and developed students</strong> entering the workforce in core professional categories, and working professionals to achieve and advance in their career to the next level.</p>
+          </div>
         </DialogContent>
       </Dialog>
     </>

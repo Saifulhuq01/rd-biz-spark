@@ -238,10 +238,10 @@ const TabNavigation = () => {
           <Button
             key={tab.id}
             variant="ghost"
-            className={`flex-1 min-w-fit px-6 py-4 text-base font-semibold rounded-none tab-button ${
+            className={`flex-1 min-w-fit px-6 py-4 text-base font-semibold rounded-none transition-colors duration-200 ${
               activeTab === tab.id
-                ? 'active bg-primary text-primary-foreground'
-                : 'bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground'
+                ? 'bg-primary text-primary-foreground border-b-2 border-primary'
+                : 'bg-card hover:bg-muted/50 text-foreground hover:text-primary'
             }`}
             onClick={() => setActiveTab(tab.id as TabType)}
           >
