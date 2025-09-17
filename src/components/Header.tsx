@@ -41,7 +41,7 @@ const Header = () => {
               className="w-20 h-20 rounded-full border-2 border-primary object-cover mx-auto"
             />
             <p className="mt-2 text-sm">
-              <strong className="text-secondary">Ravi Dakshinamoorthy</strong>
+              <strong className="text-secondary">Dr. Ravi Dakshinamoorthy</strong>
               <br />
               <span className="text-primary text-xs font-medium">Our Founder & CEO</span>
             </p>
@@ -62,7 +62,7 @@ const Header = () => {
               />
             </div>
             <DialogTitle className="text-2xl gradient-text">
-              Ravi Dakshinamoorthy
+             Dr. Ravi Dakshinamoorthy
             </DialogTitle>
           </DialogHeader>
           <div className="text-muted-foreground leading-relaxed space-y-4">

@@ -11,8 +11,8 @@ const TabNavigation = () => {
 
   const tabs = [
     { id: 'home', label: 'Home' },
-    { id: 'vision', label: 'Vision' },
     { id: 'mission', label: 'Mission' },
+    { id: 'vision', label: 'Vision' },
     { id: 'values', label: 'Values' },
     { id: 'testimonials', label: 'Testimonials' },
     { id: 'about', label: 'About Us' }
