@@ -17,49 +17,73 @@ const TabNavigation = () => {
   const galleryImages = [
     { 
       id: 1, 
-      src: '/images/office.jpg', 
+      src: '/images/office/1.jpeg', 
       alt: 'RDbiz Modern Office Space',
       category: 'Achievement'
     },
     { 
       id: 2, 
-      src: '/images/conference.jpg', 
+      src: '/images/office/2.jpeg', 
       alt: 'Business Conference Success',
       category: 'Celebration'
     },
     { 
       id: 3, 
-      src: '/images/education.jpg', 
+      src: '/images/office/3.jpeg', 
       alt: 'SET-ME Education Center',
       category: 'Achievement'
     },
     { 
       id: 4, 
-      src: '/images/real-estate.jpg', 
+      src: '/images/office/4.jpeg', 
       alt: 'Real Estate Development',
       category: 'Achievement'
     },
     { 
       id: 5, 
-      src: '/images/hire/hire1.jpeg', 
+      src: '/images/office/5.jpeg', 
       alt: 'Team Building Success',
       category: 'Celebration'
     },
     { 
       id: 6, 
-      src: '/images/hire/hire2.jpg', 
+      src: '/images/office/6.jpeg', 
       alt: 'Professional Development',
       category: 'Achievement'
     },
     { 
       id: 7, 
-      src: '/images/relaxation.jpg', 
+      src: '/images/office/7.jpeg', 
       alt: 'Wellness & Recreation Center',
       category: 'Achievement'
     },
     { 
       id: 8, 
-      src: '/images/ceo.jpg', 
+      src: '/images/office/8.jpeg', 
+      alt: 'Leadership Excellence',
+      category: 'Celebration'
+    },
+    { 
+      id: 9, 
+      src: '/images/office/9.jpeg', 
+      alt: 'Leadership Excellence',
+      category: 'Celebration'
+    },
+    { 
+      id: 10, 
+      src: '/images/office/10.jpeg', 
+      alt: 'Leadership Excellence',
+      category: 'Celebration'
+    },
+    { 
+      id: 11, 
+      src: '/images/office/11.jpeg', 
+      alt: 'Leadership Excellence',
+      category: 'Celebration'
+    },
+    { 
+      id: 12, 
+      src: '/images/office/12.jpg', 
       alt: 'Leadership Excellence',
       category: 'Celebration'
     }
@@ -310,14 +334,14 @@ const TabNavigation = () => {
 
             {/* Gallery Grid */}
             <div className="mb-6">
-              <div className="flex flex-wrap gap-2 justify-center mb-6">
+              {/* <div className="flex flex-wrap gap-2 justify-center mb-6">
                 <Badge variant="secondary" className="text-sm font-medium">
                   🏆 Achievements
                 </Badge>
                 <Badge variant="outline" className="text-sm font-medium">
                   🎉 Celebrations
                 </Badge>
-              </div>
+              </div> */}
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {galleryImages.map((image) => (
@@ -333,13 +357,13 @@ const TabNavigation = () => {
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
-                      <Badge 
+                      {/* <Badge 
                         variant={image.category === 'Achievement' ? 'secondary' : 'outline'} 
                         className="text-xs mb-1"
                       >
                         {image.category}
-                      </Badge>
-                      <p className="text-white text-sm font-medium truncate">{image.alt}</p>
+                      </Badge> */}
+                      {/* <p className="text-white text-sm font-medium truncate">{image.alt}</p> */}
                     </div>
                   </div>
                 ))}
