@@ -1,13 +1,78 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
+import { X } from 'lucide-react';
 import ServicesSection from './ServicesSection';
 import HiringSection from './HiringSection';
 import TestimonialsSection from './TestimonialsSection';
 
-type TabType = 'home' | 'vision' | 'mission' | 'values' | 'testimonials' | 'about';
+type TabType = 'home' | 'vision' | 'mission' | 'values' | 'testimonials' | 'about' | 'gallery';
 
 const TabNavigation = () => {
   const [activeTab, setActiveTab] = useState<TabType>('home');
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Gallery images data (placeholder - user will update later)
+  const galleryImages = [
+    { 
+      id: 1, 
+      src: '/images/office.jpg', 
+      alt: 'RDbiz Modern Office Space',
+      category: 'Achievement'
+    },
+    { 
+      id: 2, 
+      src: '/images/conference.jpg', 
+      alt: 'Business Conference Success',
+      category: 'Celebration'
+    },
+    { 
+      id: 3, 
+      src: '/images/education.jpg', 
+      alt: 'SET-ME Education Center',
+      category: 'Achievement'
+    },
+    { 
+      id: 4, 
+      src: '/images/real-estate.jpg', 
+      alt: 'Real Estate Development',
+      category: 'Achievement'
+    },
+    { 
+      id: 5, 
+      src: '/images/hire/hire1.jpeg', 
+      alt: 'Team Building Success',
+      category: 'Celebration'
+    },
+    { 
+      id: 6, 
+      src: '/images/hire/hire2.jpg', 
+      alt: 'Professional Development',
+      category: 'Achievement'
+    },
+    { 
+      id: 7, 
+      src: '/images/relaxation.jpg', 
+      alt: 'Wellness & Recreation Center',
+      category: 'Achievement'
+    },
+    { 
+      id: 8, 
+      src: '/images/ceo.jpg', 
+      alt: 'Leadership Excellence',
+      category: 'Celebration'
+    }
+  ];
+
+  const achievements = [
+    '🏆 Successfully implemented SOA systems for 50+ small businesses',
+    '🎯 Achieved 95% customer satisfaction rate in business solutions',
+    '📈 Helped clients increase profitability by an average of 40%',
+    '🌟 Established partnerships with global education institutions',
+    '💼 Created 200+ job opportunities through our hiring programs',
+    '🏢 Developed state-of-the-art conference and recreation centers'
+  ];
 
   const tabs = [
     { id: 'home', label: 'Home' },
@@ -15,7 +80,8 @@ const TabNavigation = () => {
     { id: 'vision', label: 'Vision' },
     { id: 'values', label: 'Values' },
     { id: 'testimonials', label: 'Testimonials' },
-    { id: 'about', label: 'About Us' }
+    { id: 'about', label: 'About Us' },
+    { id: 'gallery', label: 'Gallery' }
   ];
 
   const renderTabContent = () => {
@@ -222,6 +288,86 @@ const TabNavigation = () => {
               </div>
               <p className="mt-2 text-sm italic">Closed on Sundays and major holidays</p>
             </div>
+          </div>
+        );
+
+      case 'gallery':
+        return (
+          <div className="max-w-6xl mx-auto p-4 sm:p-8 fade-in">
+            <h2 className="text-3xl font-bold gradient-text mb-8 text-center">Our Achievements & Celebrations</h2>
+            
+            {/* Achievements Section */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-secondary mb-6 text-center">Key Achievements</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                {achievements.map((achievement, index) => (
+                  <div key={index} className="bg-card border border-primary/20 p-4 rounded-lg">
+                    <p className="text-muted-foreground">{achievement}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Gallery Grid */}
+            <div className="mb-6">
+              <div className="flex flex-wrap gap-2 justify-center mb-6">
+                <Badge variant="secondary" className="text-sm font-medium">
+                  🏆 Achievements
+                </Badge>
+                <Badge variant="outline" className="text-sm font-medium">
+                  🎉 Celebrations
+                </Badge>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {galleryImages.map((image) => (
+                  <div 
+                    key={image.id} 
+                    className="group cursor-pointer relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+                    onClick={() => setSelectedImage(image.src)}
+                  >
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+                      <Badge 
+                        variant={image.category === 'Achievement' ? 'secondary' : 'outline'} 
+                        className="text-xs mb-1"
+                      >
+                        {image.category}
+                      </Badge>
+                      <p className="text-white text-sm font-medium truncate">{image.alt}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Full Screen Image Modal */}
+            <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+              <DialogContent className="max-w-4xl w-[95vw] h-[95vh] p-0 overflow-hidden">
+                <DialogHeader className="absolute top-0 right-0 z-10 p-4">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="bg-black/50 border-white/20 text-white hover:bg-black/70"
+                    onClick={() => setSelectedImage(null)}
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                </DialogHeader>
+                {selectedImage && (
+                  <img 
+                    src={selectedImage} 
+                    alt="Full screen view"
+                    className="w-full h-full object-contain"
+                  />
+                )}
+              </DialogContent>
+            </Dialog>
           </div>
         );
 
