@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
-import { X } from 'lucide-react';
+import { X, Utensils, Cpu, ArrowUpRight } from 'lucide-react';
 import ServicesSection from './ServicesSection';
 import HiringSection from './HiringSection';
 import TestimonialsSection from './TestimonialsSection';
@@ -235,6 +235,53 @@ const TabNavigation = () => {
         return (
           <div className="max-w-4xl mx-auto p-8 fade-in">
             <h2 className="text-3xl font-bold gradient-text mb-8 text-center">About Us</h2>
+            
+            {/* Our Products Section */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <a 
+                href="http://rdbizfp.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-2xl p-1 bg-gradient-to-br from-[#FF9D6C] to-[#BB4E75] hover-lift transition-all duration-500 shadow-lg hover:shadow-2xl"
+              >
+                <div className="bg-white/95 backdrop-blur-sm rounded-[14px] p-6 h-full flex flex-col items-center text-center transition-all duration-500 group-hover:bg-transparent">
+                  <div className="mb-4 p-4 rounded-full bg-[#FF9D6C]/10 text-[#FF9D6C] group-hover:bg-white/20 group-hover:text-white transition-all duration-500">
+                    <Utensils size={40} className="animate-pulse-subtle" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors duration-500">
+                    RDbiz Food Products
+                  </h3>
+                  <p className="text-sm text-muted-foreground group-hover:text-white/90 transition-colors duration-500">
+                    Specializing in innovative food solutions and quality products for a healthier lifestyle.
+                  </p>
+                  <div className="mt-4 flex items-center text-xs font-bold uppercase tracking-wider text-[#BB4E75] group-hover:text-white transition-all duration-500">
+                    Explore Venture <ArrowUpRight size={14} className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </div>
+                </div>
+              </a>
+
+              <a 
+                href="http://rdbizaisolutions.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-2xl p-1 bg-gradient-to-br from-[#4facfe] to-[#00f2fe] hover-lift transition-all duration-500 shadow-lg hover:shadow-2xl"
+              >
+                <div className="bg-white/95 backdrop-blur-sm rounded-[14px] p-6 h-full flex flex-col items-center text-center transition-all duration-500 group-hover:bg-transparent">
+                  <div className="mb-4 p-4 rounded-full bg-[#4facfe]/10 text-[#4facfe] group-hover:bg-white/20 group-hover:text-white transition-all duration-500">
+                    <Cpu size={40} className="animate-pulse-subtle" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors duration-500">
+                    RDbiz AI Solutions
+                  </h3>
+                  <p className="text-sm text-muted-foreground group-hover:text-white/90 transition-colors duration-500">
+                    Cutting-edge Artificial Intelligence solutions for small businesses and modern infrastructure.
+                  </p>
+                  <div className="mt-4 flex items-center text-xs font-bold uppercase tracking-wider text-[#00f2fe] group-hover:text-white transition-all duration-500">
+                    Explore Venture <ArrowUpRight size={14} className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </div>
+                </div>
+              </a>
+            </div>
             
             {/* Company Description */}
             <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-xl mb-8">
