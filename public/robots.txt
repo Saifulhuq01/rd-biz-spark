@@ -1,8 +1,13 @@
+# RDbiz - Small Business Development Solutions
+# https://rdbizbsd.com
+
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +17,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://rdbizbsd.com/sitemap.xml

@@ -7,14 +7,23 @@ import FloatingLogo from '@/components/FloatingLogo';
 const Index = () => {
   useEffect(() => {
     // Update page title and meta description for SEO
-    document.title = 'RDbiz - Ravi Dakshinamoorthy Business | Small Business Development Solutions';
+    document.title = 'RDbiz - Small Business Development Solutions | Dr. Ravi Dakshinamoorthy | SET-ME Model';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 
-        'RDbiz specializes in small business development under the SET-ME model. Offering real estate, office management, conference centers, and education services with SOA systems expertise.'
+        'RDbiz (Ravi Dakshinamoorthy\'s Business) specializes in small business development under the SET-ME model. Expert solutions in real estate, office management, conference centers, education & training with SOA systems expertise. Based in Chennai, India.'
       );
     }
+
+    // Update canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://rdbizbsd.com/');
   }, []);
 
   return (
